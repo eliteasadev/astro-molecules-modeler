@@ -1,17 +1,27 @@
 import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
-import { Stats, OrbitControls } from '@react-three/drei'
+import { OrbitControls } from "@react-three/drei";
+import { GroundComponent } from "./geometric/ground/Ground";
+import { AtomSphereComponent } from "./geometric/AtomSphere";
+import { CreatorPanelComponent } from "../ui/CreatorPanel";
 
-export default function ModelerComponent() {
+export default function ModelerComponent({ id }) {
+  console.log(id);
   return (
     <div className="h-screen">
-      <Canvas className="h-screen bg-white" >
+      {/* Controls canvas */}
+      <CreatorPanelComponent />
+
+      {/* Modeler Canvas */}
+      <Canvas className="h-screen bg-white">
         <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         <OrbitControls />
         <Physics>
+          <AtomSphereComponent center={[1, 1, 1]} />
+          <GroundComponent />
         </Physics>
       </Canvas>
     </div>

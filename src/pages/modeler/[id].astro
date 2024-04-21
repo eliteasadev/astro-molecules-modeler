@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ModelerComponent from "../../components/modeler/Modeler.jsx";
+
+const { id } = Astro.params;
+---
+
+<Layout title="Welcome to Astro.">
+  <ModelerComponent client:only="react" id={id} />
+</Layout>

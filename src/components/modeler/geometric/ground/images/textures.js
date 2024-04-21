@@ -1,12 +1,10 @@
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
+import { NearestFilter, RepeatWrapping, TextureLoader } from 'three'
 
-// import { glassImage } from "./images.js";
+const groundTexture = new TextureLoader().load("/glass.png?url")
+groundTexture.wrapS = RepeatWrapping
+groundTexture.wrapT = RepeatWrapping
+groundTexture.magFilter = NearestFilter
 
-import { groundTextureUrl } from "./glass.png";
-
-const groundTexture = new TextureLoader().load(groundTextureUrl);
-groundTexture.wrapS = RepeatWrapping;
-groundTexture.wrapT = RepeatWrapping;
-groundTexture.magFilter = NearestFilter;
-
-export { groundTexture };
+export {
+  groundTexture
+}
