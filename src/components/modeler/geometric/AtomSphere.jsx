@@ -1,4 +1,4 @@
-import { useSphere } from '@react-three/cannon'
+import { useSphere } from "@react-three/cannon";
 
 /**
  * @param {Array} center
@@ -6,8 +6,7 @@ import { useSphere } from '@react-three/cannon'
  * @param {string} color
  */
 
-export function AtomSphereComponent({center, radius, color}) {
-  console.log(center)
+export function AtomSphereComponent({ center, radius, color }) {
   return (
     <mesh
       visible
@@ -16,7 +15,12 @@ export function AtomSphereComponent({center, radius, color}) {
       rotation={[Math.PI / 2, 0, 0]}
     >
       <sphereGeometry args={[1, 64, 64]} />
-      <meshStandardMaterial color="hotpink" transparent metalness={0} roughness={1}/>
+      <meshStandardMaterial
+        color="hotpink"
+        transparent
+        metalness={0}
+        roughness={1}
+      />
     </mesh>
   );
 }
