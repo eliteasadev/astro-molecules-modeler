@@ -4,15 +4,12 @@ import { Physics } from "@react-three/cannon";
 import { OrbitControls } from "@react-three/drei";
 import { GroundComponent } from "./geometric/ground/Ground";
 import { AtomSphereComponent } from "./geometric/AtomSphere";
-import { CreatorPanelComponent } from "../ui/CreatorPanel";
 import OptionsPanel from "../ui/OptionsPanel";
 
 export default function ModelerComponent({ id }) {
-  console.log(id);
   return (
     <div className="h-screen">
       {/* Controls canvas */}
-      {/* <CreatorPanelComponent /> */}
       <OptionsPanel />
 
       {/* Modeler Canvas */}
