@@ -1,4 +1,4 @@
-import { Cross } from "../../../icons/Cross";
+import { Cross } from "../../icons/Cross";
 
 export function CreateAtom() {
   return (

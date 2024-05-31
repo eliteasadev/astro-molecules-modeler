@@ -2,9 +2,9 @@ import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
 import { OrbitControls } from "@react-three/drei";
-import { GroundComponent } from "./geometric/ground/Ground";
-import { AtomSphereComponent } from "./geometric/AtomSphere";
-import OptionsPanel from "../ui/OptionsPanel";
+import { GroundComponent } from "../threejs/ground/Ground";
+import { AtomSphereComponent } from "../threejs/AtomSphere";
+import OptionsPanel from "./ui/OptionsPanel";
 
 export default function ModelerComponent({ id }) {
   return (
