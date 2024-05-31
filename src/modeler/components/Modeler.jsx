@@ -1,12 +1,26 @@
+import { useEffect } from "react";
+
 import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
 import { OrbitControls } from "@react-three/drei";
-import { GroundComponent } from "../threejs/ground/Ground";
-import { AtomSphereComponent } from "../threejs/AtomSphere";
-import OptionsPanel from "./ui/OptionsPanel";
 
-export default function ModelerComponent({ id }) {
+import { GroundComponent } from "../threejs/ground/Ground";
+import OptionsPanel from "./ui/Options";
+import { useStore as useAtoms } from "../store/three";
+import { Molecule } from "../threejs/Molecule";
+import { nanoid } from "nanoid";
+
+export default function ModelerComponent() {
+  const addAtom = useAtoms((state) => state.addAtom);
+
+  const [atoms, setAtoms] = useAtoms((state) => [state.atoms, state.setAtoms]);
+
+  useEffect(() => {
+    const initialURL = window.location.pathname.slice(9);
+    setAtoms(JSON.parse(atob(initialURL)));
+  }, []);
+
   return (
     <div className="h-screen">
       {/* Controls canvas */}
@@ -19,7 +33,7 @@ export default function ModelerComponent({ id }) {
         <pointLight position={[10, 10, 10]} />
         <OrbitControls />
         <Physics>
-          <AtomSphereComponent center={[1, 1, 1]} />
+          <Molecule />
           <GroundComponent />
         </Physics>
       </Canvas>
