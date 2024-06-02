@@ -4,6 +4,12 @@ import { create } from "zustand";
 export const useStore = create((set, get) => ({
   atoms: [],
   connectors: [],
+  connector: [],
+  setConnector: (connector) => {
+    set((state) => ({
+      connector,
+    }));
+  },
   setAtoms: (atoms) => {
     set((state) => ({
       atoms,
@@ -36,4 +42,21 @@ export const useStore = create((set, get) => ({
     const pathURL = btoa(atomsJSON);
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
+  addConnector: (startPoint, endPoint) => {
+    set((state) => ({
+      connectors: [
+        ...state.connectors,
+        {
+          id: nanoid(),
+          startPoint,
+          endPoint
+        }
+      ]
+    }));
+  },
+  removeConnector: (id) => {
+    set((state) => ({
+      connectors: state.connectors.filter((connector) => connector.id !== id)
+    }));
+  }
 }));

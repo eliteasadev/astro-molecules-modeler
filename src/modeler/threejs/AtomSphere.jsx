@@ -3,7 +3,14 @@ import { useSphere } from "@react-three/cannon";
 import { useStore as useAtoms } from "../store/three";
 
 export function AtomSphereComponent({ center, radius, color }) {
-  const removeAtom = useAtoms((state) => state.removeAtom);
+  const [connector, setConnector, addConnector, removeAtom] = useAtoms(
+    (state) => [
+      state.connector,
+      state.setConnector,
+      state.addConnector,
+      state.removeAtom,
+    ]
+  );
 
   const [ref] = useSphere(() => ({
     position: center,
@@ -19,7 +26,17 @@ export function AtomSphereComponent({ center, radius, color }) {
       scale={[radius, radius, radius]}
       onClick={(e) => {
         e.stopPropagation();
-        removeAtom(...center);
+        const { x, y, z } = ref.current.position;
+        if (e.ctrlKey) {
+          if (connector.length === 0) {
+            setConnector(center);
+          } else {
+            addConnector(connector, center);
+            setConnector([]);
+          }
+        } else if (e.shiftKey) {
+          removeAtom(...center);
+        }
       }}
     >
       <sphereGeometry args={[1, 64, 64]} />
