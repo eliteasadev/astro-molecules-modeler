@@ -43,7 +43,6 @@ export function CreateAtom() {
         onClick={(e) => {
           e.preventDefault();
           addAtom(...atom);
-          console.log(atoms);
           setOptions("Options");
         }}
       >

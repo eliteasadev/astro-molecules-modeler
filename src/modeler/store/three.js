@@ -20,6 +20,9 @@ export const useStore = create((set, get) => ({
         },
       ],
     }));
+    const atomsJSON = JSON.stringify(useStore.getState().atoms);
+    const pathURL = btoa(atomsJSON);
+    window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
   removeAtom: (x, y, z) => {
     set((state) => ({
@@ -28,5 +31,8 @@ export const useStore = create((set, get) => ({
         return X !== x || Y !== y || Z !== z;
       }),
     }));
+    const atomsJSON = JSON.stringify(useStore.getState().atoms);
+    const pathURL = btoa(atomsJSON);
+    window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
 }));
