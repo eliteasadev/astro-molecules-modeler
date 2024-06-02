@@ -1,13 +1,14 @@
 import { Cross } from "../../icons/Cross";
 import { useStore as useUI } from "../../store/ui";
 import { useStore as useAtoms } from "../../store/three";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function CreateAtom() {
   const [setOptions] = useUI((state) => [state.setOptions]);
   const [atoms, addAtom] = useAtoms((state) => [state.atoms, state.addAtom]);
 
   const [atom, setAtom] = useState([]);
+
   return (
     <form
       className={`absolute z-10 shadow-xl bg-base-100 p-3 m-2 rounded-md flex gap-2 max-w-xl items-center`}
@@ -37,6 +38,14 @@ export function CreateAtom() {
         onChange={(e) => setAtom([atom[0], atom[1], atom[2], e.target.value])}
         className="w-full p-2"
         type="number"
+      />
+      <input
+        type="color"
+        value={`${atom[4]}`}
+        onChange={(e) => {
+          setAtom([atom[0], atom[1], atom[2], atom[3], e.target.value]);
+        }}
+        className=" w-full bg-slate-700 rounded-sm"
       />
       <button
         className="p-2 bg-emerald-600 hover:bg-emerald-400 rounded-sm text-white"

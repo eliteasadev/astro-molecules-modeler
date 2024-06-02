@@ -9,7 +9,7 @@ export const useStore = create((set, get) => ({
       atoms,
     }));
   },
-  addAtom: (x, y, z, rad) => {
+  addAtom: (x, y, z, rad, color) => {
     set((state) => ({
       atoms: [
         ...state.atoms,
@@ -17,6 +17,7 @@ export const useStore = create((set, get) => ({
           id: nanoid(),
           pos: [x, y, z],
           rad: rad,
+          color: color,
         },
       ],
     }));
