@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_24ihDUES.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_yeAoWWdf.mjs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, f as fileExtension, s as slash, p as prependForwardSlash, g as removeTrailingForwardSlash, h as collapseDuplicateSlashes } from './chunks/astro/assets-service_DX_fVJiB.mjs';
 import { R as ROUTE_TYPE_HEADER, l as REROUTE_DIRECTIVE_HEADER, A as AstroError, n as ResponseSentError, o as MiddlewareNoDataOrNextCalled, p as MiddlewareNotAResponse, G as GetStaticPathsRequired, q as InvalidGetStaticPathsReturn, t as InvalidGetStaticPathsEntry, u as GetStaticPathsExpectedParams, v as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, w as PrerenderDynamicEndpointPathCollide, x as ReservedSlotName, y as renderSlotToString, z as renderJSX, B as chunkToString, C as isRenderInstruction, H as LocalsNotAnObject, J as clientLocalsSymbol, K as clientAddressSymbol$1, O as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, Q as ASTRO_VERSION, T as responseSentSymbol$1, V as AstroResponseHeadersReassigned, W as renderPage, X as renderEndpoint, Y as REROUTABLE_STATUS_CODES } from './chunks/astro_DVWVKbJz.mjs';
 import { serialize, parse } from 'cookie';
@@ -2134,9 +2134,9 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_B49MIqC5.mjs');
-const _page1 = () => import('./chunks/about_DV9Z2UjB.mjs');
-const _page2 = () => import('./chunks/_id__Bv6GeIv9.mjs');
-const _page3 = () => import('./chunks/index_DnVVFAXm.mjs');
+const _page1 = () => import('./chunks/about_v_nzBRf2.mjs');
+const _page2 = () => import('./chunks/_id__B1kTCRp_.mjs');
+const _page3 = () => import('./chunks/index_DRCkmgJs.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/about.astro", _page1],
@@ -2150,7 +2150,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "86c65b70-ce04-4bf0-a04b-b6b4f572a5bb"
+    "middlewareSecret": "ae4163c4-9887-4fce-9113-edcd97134d88"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;

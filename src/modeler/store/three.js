@@ -15,6 +15,11 @@ export const useStore = create((set, get) => ({
       atoms,
     }));
   },
+  setConnectors: (connectors) => {
+    set((state) => ({
+      connectors,
+    }));
+  },
   addAtom: (x, y, z, rad, color) => {
     set((state) => ({
       atoms: [
@@ -27,8 +32,8 @@ export const useStore = create((set, get) => ({
         },
       ],
     }));
-    const atomsJSON = JSON.stringify(useStore.getState().atoms);
-    const pathURL = btoa(atomsJSON);
+    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
   removeAtom: (x, y, z) => {
@@ -38,8 +43,8 @@ export const useStore = create((set, get) => ({
         return X !== x || Y !== y || Z !== z;
       }),
     }));
-    const atomsJSON = JSON.stringify(useStore.getState().atoms);
-    const pathURL = btoa(atomsJSON);
+    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
   addConnector: (startPoint, endPoint) => {
@@ -49,14 +54,20 @@ export const useStore = create((set, get) => ({
         {
           id: nanoid(),
           startPoint,
-          endPoint
-        }
-      ]
+          endPoint,
+        },
+      ],
     }));
+    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const pathURL = btoa(JSON.stringify(structureToURL));
+    window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
   removeConnector: (id) => {
     set((state) => ({
-      connectors: state.connectors.filter((connector) => connector.id !== id)
+      connectors: state.connectors.filter((connector) => connector.id !== id),
     }));
-  }
+    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const pathURL = btoa(JSON.stringify(structureToURL));
+    window.history.pushState({}, "", `/modeler/${pathURL}`);
+  },
 }));

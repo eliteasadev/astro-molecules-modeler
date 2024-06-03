@@ -12,13 +12,17 @@ import { Molecule } from "../threejs/Molecule";
 import { nanoid } from "nanoid";
 
 export default function ModelerComponent() {
-  const addAtom = useAtoms((state) => state.addAtom);
-
-  const [atoms, setAtoms] = useAtoms((state) => [state.atoms, state.setAtoms]);
+  const [setAtoms, setConnectors] = useAtoms((state) => [
+    state.setAtoms,
+    state.setConnectors,
+  ]);
 
   useEffect(() => {
     const initialURL = window.location.pathname.slice(9);
-    setAtoms(JSON.parse(atob(initialURL)));
+    const urlDecode = atob(initialURL);
+    const { atoms, connectors } = JSON.parse(urlDecode);
+    setAtoms(atoms);
+    setConnectors(connectors);
   }, []);
 
   return (
