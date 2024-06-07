@@ -30,7 +30,7 @@ const $$Astro$2 = createAstro();
 const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Navbar;
-  return renderTemplate`${maybeRenderHead()}<div class="navbar bg-base-100"> <div class="flex-1"> <a class="btn btn-ghost text-xl" href="/">${renderComponent($$result, "HomeIcon", HomeIcon, {})} Inicio</a> </div> <div class="flex-none"> <ul class="menu menu-horizontal px-1"> <li><a href="/modeler/">Modelador</a></li> <li><a href="/about">Acerca de</a></li> </ul> </div> </div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="navbar bg-base-100"> <div class="flex-1"> <a class="btn btn-ghost text-xl" href="/">${renderComponent($$result, "HomeIcon", HomeIcon, {})} Inicio</a> </div> <div class="flex-none"> <ul class="menu menu-horizontal px-1"> <li><a href="/modeler">Modelador</a></li> <li><a href="/about">Acerca de</a></li> </ul> </div> </div>`;
 }, "/home/elite/Dev/astro-molecules-modeler/src/modeler/components/ui/Navbar.astro", void 0);
 
 const $$Astro$1 = createAstro();
