@@ -6,13 +6,12 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  redirects: {
-    '/modeler': {
-      status:302,
-      destination: '/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119'
-    }
-  }
-  ,
+  // redirects: {
+  //   '/modeler': {
+  //     status:302,
+  //     destination: '/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119'
+  //   }
+  // }
   integrations: [tailwind(), react({
     experimentalReactChildren: true
   })],
