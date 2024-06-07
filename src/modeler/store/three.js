@@ -32,7 +32,31 @@ export const useStore = create((set, get) => ({
         },
       ],
     }));
-    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const structureToURL = {
+      atoms: useStore.getState().atoms,
+      connectors: useStore.getState().connectors,
+    };
+    const pathURL = btoa(JSON.stringify(structureToURL));
+    window.history.pushState({}, "", `/modeler/${pathURL}`);
+  },
+  setAtomById: (id, pos, rad, color ) => {
+    set((state) => ({
+      atoms: state.atoms.map((atom) => {
+        if (atom.id === id) {
+          return {
+            ...atom,
+            pos: pos,
+            rad: rad,
+            color: color,
+          };
+        }
+        return atom;
+      }),
+    }));
+    const structureToURL = {
+      atoms: useStore.getState().atoms,
+      connectors: useStore.getState().connectors,
+    };
     const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
@@ -43,7 +67,10 @@ export const useStore = create((set, get) => ({
         return X !== x || Y !== y || Z !== z;
       }),
     }));
-    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const structureToURL = {
+      atoms: useStore.getState().atoms,
+      connectors: useStore.getState().connectors,
+    };
     const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
@@ -58,7 +85,10 @@ export const useStore = create((set, get) => ({
         },
       ],
     }));
-    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const structureToURL = {
+      atoms: useStore.getState().atoms,
+      connectors: useStore.getState().connectors,
+    };
     const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },
@@ -66,7 +96,10 @@ export const useStore = create((set, get) => ({
     set((state) => ({
       connectors: state.connectors.filter((connector) => connector.id !== id),
     }));
-    const structureToURL = { atoms: useStore.getState().atoms, connectors: useStore.getState().connectors };
+    const structureToURL = {
+      atoms: useStore.getState().atoms,
+      connectors: useStore.getState().connectors,
+    };
     const pathURL = btoa(JSON.stringify(structureToURL));
     window.history.pushState({}, "", `/modeler/${pathURL}`);
   },

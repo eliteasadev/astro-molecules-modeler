@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
@@ -9,10 +9,11 @@ import { GroundComponent } from "../threejs/ground/Ground";
 import OptionsPanel from "./ui/Options";
 import { useStore as useAtoms } from "../store/three";
 import { Molecule } from "../threejs/Molecule";
-import { nanoid } from "nanoid";
+import { AtomProperties } from "./AtomProperties";
 
 export default function ModelerComponent() {
-  const [setAtoms, setConnectors] = useAtoms((state) => [
+  const [atoms, setAtoms, setConnectors] = useAtoms((state) => [
+    state.atoms,
     state.setAtoms,
     state.setConnectors,
   ]);
@@ -20,18 +21,24 @@ export default function ModelerComponent() {
   useEffect(() => {
     const initialURL = window.location.pathname.slice(9);
     const urlDecode = atob(initialURL);
-    const { atoms, connectors } = JSON.parse(urlDecode);
-    setAtoms(atoms);
-    setConnectors(connectors);
+    const urlData = JSON.parse(urlDecode);
+    setAtoms(urlData.atoms);
+    setConnectors(urlData.connectors);
   }, []);
+
+  const [renderKey, setRenderKey] = useState(0);
+  useEffect(() => {
+    setRenderKey((prevKey) => prevKey + 1);
+  }, [atoms]);
 
   return (
     <div className="h-screen">
       {/* Controls canvas */}
       <OptionsPanel />
+      <AtomProperties />
 
       {/* Modeler Canvas */}
-      <Canvas className="h-screen bg-white">
+      <Canvas className="h-screen bg-white" key={renderKey}>
         <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />

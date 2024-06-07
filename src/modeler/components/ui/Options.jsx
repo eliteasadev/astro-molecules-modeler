@@ -1,4 +1,4 @@
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "../../store/ui";
 import AtomIcon from "../../icons/Atom";
 import ConnectionIcon from "../../icons/Connection";
@@ -7,8 +7,10 @@ import { CreateAtom } from "./AtomOption";
 import { ConnectorOption } from "./ConnectorOption";
 
 export default function OptionsPanel() {
-  
-  const [options, setOptions] = useStore((state) => [state.options, state.setOptions]);
+  const [options, setOptions] = useStore((state) => [
+    state.options,
+    state.setOptions,
+  ]);
 
   const [atoms, setAtoms] = useState(["", ""]);
   useEffect(() => {}, [options, atoms]);
@@ -42,12 +44,8 @@ export default function OptionsPanel() {
         </form>
       );
     case "Atom":
-      return (
-        <CreateAtom />
-      );
+      return <CreateAtom />;
     case "Connection":
-      return (
-        <ConnectorOption/>
-      );
+      return <ConnectorOption />;
   }
 }

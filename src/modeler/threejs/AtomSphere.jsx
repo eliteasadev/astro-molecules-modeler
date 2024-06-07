@@ -1,8 +1,9 @@
 import { useSphere } from "@react-three/cannon";
 
 import { useStore as useAtoms } from "../store/three";
+import { useStore as useUI } from "../store/ui";
 
-export function AtomSphereComponent({ center, radius, color }) {
+export function AtomSphereComponent({ id, center, radius, color }) {
   const [connector, setConnector, addConnector, removeAtom] = useAtoms(
     (state) => [
       state.connector,
@@ -11,6 +12,7 @@ export function AtomSphereComponent({ center, radius, color }) {
       state.removeAtom,
     ]
   );
+  const [setAtomSelected] = useUI((state) => [state.setAtomSelected]);
 
   const [ref] = useSphere(() => ({
     position: center,
@@ -36,6 +38,8 @@ export function AtomSphereComponent({ center, radius, color }) {
           }
         } else if (e.shiftKey) {
           removeAtom(...center);
+        } else {
+          setAtomSelected({ id: id, pos: center, rad: radius, color });
         }
       }}
     >

@@ -9,7 +9,7 @@ export default defineConfig({
   redirects: {
     '/modeler': {
       status:302,
-      destination: '/modeler/eyJhdG9tcyI6W3siaWQiOiJ4R18zY2FPT253YzJVeEZmR0EyZXIiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJhZiJ9XSwiY29ubmVjdG9ycyI6W3t9XX0='
+      destination: '/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119'
     }
   }
   ,
