@@ -31,7 +31,7 @@ export default function OptionsPanel() {
           >
             <AtomIcon />
           </button>
-          <button
+          {/* <button
             onClick={(e) => {
               e.preventDefault();
               setOptions("Connection");
@@ -40,7 +40,7 @@ export default function OptionsPanel() {
             className="p-2 bg-emerald-600 hover:bg-emerald-400 rounded-sm"
           >
             <ConnectionIcon />
-          </button>
+          </button> */}
         </form>
       );
     case "Atom":
