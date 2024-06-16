@@ -20,7 +20,6 @@ export function AtomSphereComponent({ id, center, radius, color }) {
 
   return (
     <mesh
-      castShadow
       ref={ref}
       visible
       userData={{ hello: "world" }}
@@ -48,9 +47,8 @@ export function AtomSphereComponent({ id, center, radius, color }) {
       <meshStandardMaterial
         color={color}
         transparent
-        metalness={0.4}
-        roughness={0.4}
-        emissive={color}
+        metalness={0.45}
+        roughness={0.45}
       />
     </mesh>
   );

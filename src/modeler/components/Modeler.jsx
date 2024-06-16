@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
-import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { RandomizedLight, Environment, OrbitControls } from "@react-three/drei";
 
 import { GroundComponent } from "../threejs/ground/Ground";
 import OptionsPanel from "./ui/Options";
@@ -38,16 +37,16 @@ export default function ModelerComponent() {
       <AtomProperties />
 
       {/* Modeler Canvas */}
-      <Canvas className="h-screen bg-white" key={renderKey}>
-        <Sky sunPosition={[100, 100, 20]} />
-        <ambientLight intensity={0.2} />
-        <pointLight position={[10, 10, 10]} intensity={0.1} />
-        <Physics>
-          <Molecule />
-          <GroundComponent />
-        </Physics>
+      <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
+        <group position={[0, -0.65, 0]}>
+          <Physics>
+            <Molecule />
+            <GroundComponent />
+          </Physics>
+          <RandomizedLight amount={8} radius={5} ambient={0.5} bias={0.001} />
+        </group>
+        <Environment preset="city" />
         <OrbitControls />
-        <Environment preset="park" />
       </Canvas>
     </div>
   );
