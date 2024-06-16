@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 
 import { GroundComponent } from "../threejs/ground/Ground";
 import OptionsPanel from "./ui/Options";
@@ -40,13 +40,14 @@ export default function ModelerComponent() {
       {/* Modeler Canvas */}
       <Canvas className="h-screen bg-white" key={renderKey}>
         <Sky sunPosition={[100, 100, 20]} />
-        <ambientLight intensity={1} />
-        <pointLight position={[10, 10, 10]} />
-        <OrbitControls />
+        <ambientLight intensity={0.2} />
+        <pointLight position={[10, 10, 10]} intensity={0.1} />
         <Physics>
           <Molecule />
           <GroundComponent />
         </Physics>
+        <OrbitControls />
+        <Environment preset="park" />
       </Canvas>
     </div>
   );

@@ -12,8 +12,8 @@ import Layout from "../layouts/Layout.astro";
     <h2
       class="mt-6 text-xl font-light text-pretty max-w-lg text-center text-white"
     >
-      Modela, utiliza y comparte tus modelos con FESA Molecule. Una aplicación
-      de creación de modelos moleculares por y para estudiantes.
+      Crea, utiliza y comparte tus modelos con FESA Molecule. Una aplicación de
+      creada por y para estudiantes.
     </h2>
     <a
       class="btn btn-accent mt-3"
@@ -25,5 +25,65 @@ import Layout from "../layouts/Layout.astro";
       alt="modeler"
       class="mt-14 max-w-lg rounded-md pb-6"
     />
+    <div class="flex flex-col w-full">
+      <div class="divider divider-primary"></div>
+    </div>
+    <h2
+      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
+    >
+      ¿Qué es FESA Molecule?
+    </h2>
+    <p
+      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white pb-14"
+    >
+      FESA Molecule es una aplicación de creación de modelos moleculares para
+      estudiantes. La idea es que los estudiantes puedan crear y compartir
+      modelos moleculares de manera fácil y intuitiva. La aplicación se basa en
+      la librería Three.js y utiliza un modelo de datos en JSON para representar
+      los modelos.
+    </p>
+    <div class="flex flex-col w-full">
+      <div class="divider divider-primary"></div>
+    </div>
+    <h2
+      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
+    >
+      ¿Cuál es el modelo de datos?
+    </h2>
+    <p
+      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white"
+    >
+      El modelo de datos de FESA Molecule es un conjunto de objetos JSON que
+      tiene dos llaves principales. La primera llave es un arreglo donde cada
+      item es un átomo presente en la molécula. La segunda llave es un arreglo
+      con la información de los enlaces que se crean entre los átomos. El
+      siguiente es un ejemplo:
+    </p>
+    <code
+      class="mt-6 text-xl font-light text-pretty max-w-lg text-center text-white pb-14"
+    >
+      &#123;
+      "atoms":[&#123;"id":"hx1","pos":["0","0","0"],"rad":"0.5","color":"#2fa4e7"&#125;],"connectors":[]
+      &#125;
+    </code>
+
+    <div class="flex flex-col w-full">
+      <div class="divider divider-primary"></div>
+    </div>
+    <h2
+      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
+    >
+      ¿Cómo utilizar?
+    </h2>
+    <p
+      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white pb-14"
+    >
+      Puedes empezar a modelar de dos formas, la primera es usando un espacio en
+      blanco desde el apartado <a
+        href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119"
+        >Modela</a
+      > y la segunda es utilizando un template de nuestra sección
+      <a href="/molecules">Moleculas</a>.
+    </p>
   </div>
 </Layout>
