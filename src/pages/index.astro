@@ -4,86 +4,110 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="FESA Molecule modeler - Home">
   <div class="flex flex-col items-center justify-center">
-    <h1
-      class="mt-14 text-5xl font-bold text-pretty max-w-screen-sm text-center text-white"
-    >
-      Modela moleculas de manera intuitiva y fácil.
-    </h1>
-    <h2
-      class="mt-6 text-xl font-light text-pretty max-w-lg text-center text-white"
-    >
-      Crea, utiliza y comparte tus modelos con FESA Molecule. Una aplicación de
-      creada por y para estudiantes.
-    </h2>
-    <a
-      class="btn btn-accent mt-3"
-      href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119"
-      >Modela</a
-    >
-    <img
-      src="/modeler.png"
-      alt="modeler"
-      class="mt-14 max-w-lg rounded-md pb-6"
-    />
-    <div class="flex flex-col w-full">
-      <div class="divider divider-primary"></div>
+    <!-- HERO -->
+    <div class="flex items-center mt-32 mb-32">
+      <div>
+        <h1 class="text-5xl font-bold text-pretty max-w-screen-sm text-white">
+          Modela moleculas de manera intuitiva y fácil.
+        </h1>
+        <h2 class="mt-4 text-xl font-light text-pretty max-w-lg text-white">
+          Nuestro modelador de moléculas permite a los estudiantes y profesores
+          visualizar, y analizar estructuras moleculares de manera sencilla.
+        </h2>
+        <a
+          class="btn btn-accent mt-4"
+          href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119"
+          >Modela</a
+        >
+      </div>
+      <img
+        src="/modeler.png"
+        alt="modeler"
+        class="mt-14 max-w-lg rounded-md pb-6"
+      />
     </div>
-    <h2
-      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
-    >
-      ¿Qué es FESA Molecule?
-    </h2>
-    <p
-      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white pb-14"
-    >
-      FESA Molecule es una aplicación de creación de modelos moleculares para
-      estudiantes. La idea es que los estudiantes puedan crear y compartir
-      modelos moleculares de manera fácil y intuitiva. La aplicación se basa en
-      la librería Three.js y utiliza un modelo de datos en JSON para representar
-      los modelos.
-    </p>
-    <div class="flex flex-col w-full">
-      <div class="divider divider-primary"></div>
-    </div>
-    <h2
-      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
-    >
-      ¿Cuál es el modelo de datos?
-    </h2>
-    <p
-      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white"
-    >
-      El modelo de datos de FESA Molecule es un conjunto de objetos JSON que
-      tiene dos llaves principales. La primera llave es un arreglo donde cada
-      item es un átomo presente en la molécula. La segunda llave es un arreglo
-      con la información de los enlaces que se crean entre los átomos. El
-      siguiente es un ejemplo:
-    </p>
-    <code
-      class="mt-6 text-xl font-light text-pretty max-w-lg text-center text-white pb-14"
-    >
-      &#123;
-      "atoms":[&#123;"id":"hx1","pos":["0","0","0"],"rad":"0.5","color":"#2fa4e7"&#125;],"connectors":[]
-      &#125;
-    </code>
 
-    <div class="flex flex-col w-full">
-      <div class="divider divider-primary"></div>
+    <!-- FAQ -->
+    <div class="flex flex-col items-center pt-32 pb-32 bg-slate-900 w-full">
+      <p class="mb-4">Caracteristicas</p>
+      <h2 class="text-4xl font-semibold text-white">
+        Potente herramienta para modelado molecular
+      </h2>
+      <!-- Key Features -->
+      <div class="flex flex-row justify-center gap-20 mt-4">
+        <!-- Visualización 3D -->
+        <div class="flex flex-col justify-center gap-4 items-center">
+          <h2 class="text-2xl text-white">Visualización 3D</h2>
+          <p class="max-w-xs text-center">
+            Con la ayuda de la biblioteca Threejs se puede interactuar en 3D con
+            el modelo deseado.
+          </p>
+        </div>
+        <!-- Colaboración -->
+        <div class="flex flex-col justify-center gap-4 items-center">
+          <h2 class="text-2xl text-white">Colaboración</h2>
+          <p class="max-w-xs text-center">
+            No necesitas exportar el modelo para compartirlo con otros.
+            Siemplemente comparte el link de la aplicación para que otros puedan
+            interactuar con tu modelo.
+          </p>
+        </div>
+        <!-- Customización -->
+        <div class="flex flex-col justify-center gap-4 items-center">
+          <h2 class="text-2xl text-white">Customización</h2>
+          <p class="max-w-xs text-center">
+            Puedes modificar cualquiera de los modelos ya existentes o que hayas
+            creado en cualquier momento solo conservando el link.
+          </p>
+        </div>
+      </div>
     </div>
-    <h2
-      class="mt-14 text-2xl font-bold text-pretty max-w-screen-sm text-center text-white"
-    >
-      ¿Cómo utilizar?
-    </h2>
-    <p
-      class="mt-6 text-lg font-light text-pretty max-w-lg text-center text-white pb-14"
-    >
-      Puedes empezar a modelar de dos formas, la primera es usando un espacio en
-      blanco desde el apartado <a
-        href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119"
-        >Modela</a
-      > y la segunda es utilizando un template de nuestra sección
-      <a href="/molecules">Moleculas</a>.
-    </p>
+
+    <!-- EXAMPLES -->
+    <div class="flex flex-col items-center pt-32 pb-32">
+      <div class="badge badge-outline">Ejemplos de moleculas</div>
+      <h2 class="text-4xl font-semibold text-white pt-4">
+        Explora estructuras moleculares
+      </h2>
+      <p class="max-w-md text-center text-pretty">
+        Eche un vistazo a algunas de las complejas estructuras moleculares que
+        se han creado y analizado utilizando nuestro potente modelador de
+        moléculas.
+      </p>
+
+      <!-- Examples -->
+      <div class="flex items-center gap-20">
+        <div>
+          <div class="mb-4">
+            <a href="#" class="text-2xl text-white font-semibold">Cafeina</a>
+            <p class="max-w-sm text-pretty text-start mt-1">
+              Visualice la compleja estructura molecular de la cafeína, un
+              estimulante que se encuentra en el café, el té y otras bebidas.
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <a href="#" class="text-2xl text-white font-semibold">Epinefrina</a>
+            <p class="max-w-sm text-pretty text-start mt-1">
+              Aumenta la frecuencia cardíaca, contrae los vasos sanguíneos y
+              dilata las vías respiratorias.
+            </p>
+          </div>
+
+          <div>
+            <a href="#" class="text-2xl text-white font-semibold">Agua</a>
+            <p class="max-w-sm text-pretty text-start mt-1">
+              Esta molécula es esencial en la vida de los seres vivos, al servir
+              de medio para el metabolismo de las biomoléculas
+            </p>
+          </div>
+        </div>
+        <img
+          src="/modeler.png"
+          alt="modeler"
+          class="mt-14 max-w-lg rounded-md pb-6"
+        />
+      </div>
+    </div>
   </div>
 </Layout>
