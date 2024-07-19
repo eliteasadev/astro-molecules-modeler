@@ -1,7 +1,20 @@
 ---
+import InorganicMolecules from "@/modeler/data/inorganic-molecules";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Moleculas prefabricadas">
-  <h1 class="text-center text-3xl font-light">En construcción</h1>
+  <div class="flex flex-col gap-4 m-16">
+    <h1 class="text-3xl font-bold">Moleculas inorganicas</h1>
+    {
+      InorganicMolecules.map((data) => (
+        <a
+          class="text-xl btn btn-outline"
+          href={`/modeler/${btoa(JSON.stringify(data.molecule))}`}
+        >
+          {data.name}
+        </a>
+      ))
+    }
+  </div>
 </Layout>

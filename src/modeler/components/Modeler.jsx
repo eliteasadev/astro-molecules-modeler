@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
-import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/cannon";
-import { RandomizedLight, Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, RandomizedLight } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
-import { GroundComponent } from "../threejs/ground/Ground";
-import OptionsPanel from "./ui/Options";
 import { useStore as useAtoms } from "../store/three";
+import { GroundComponent } from "../threejs/ground/Ground";
 import { Molecule } from "../threejs/Molecule";
 import { AtomProperties } from "./AtomProperties";
+import OptionsPanel from "./ui/Options";
 
 export default function ModelerComponent() {
   const [atoms, setAtoms, setConnectors] = useAtoms((state) => [
@@ -31,7 +31,7 @@ export default function ModelerComponent() {
   }, [atoms]);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen" key={renderKey}>
       {/* Controls canvas */}
       <OptionsPanel />
       <AtomProperties />

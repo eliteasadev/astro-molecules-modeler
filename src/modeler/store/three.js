@@ -1,5 +1,5 @@
-import { nanoid } from "nanoid";
-import { create } from "zustand";
+import { nanoid } from 'nanoid'
+import { create } from 'zustand'
 
 export const useStore = create((set, get) => ({
   atoms: [],
@@ -7,18 +7,18 @@ export const useStore = create((set, get) => ({
   connector: [],
   setConnector: (connector) => {
     set((state) => ({
-      connector,
-    }));
+      connector
+    }))
   },
   setAtoms: (atoms) => {
     set((state) => ({
-      atoms,
-    }));
+      atoms
+    }))
   },
   setConnectors: (connectors) => {
     set((state) => ({
-      connectors,
-    }));
+      connectors
+    }))
   },
   addAtom: (x, y, z, rad, color) => {
     set((state) => ({
@@ -27,52 +27,52 @@ export const useStore = create((set, get) => ({
         {
           id: nanoid(),
           pos: [x, y, z],
-          rad: rad,
-          color: color,
-        },
-      ],
-    }));
+          rad,
+          color
+        }
+      ]
+    }))
     const structureToURL = {
       atoms: useStore.getState().atoms,
-      connectors: useStore.getState().connectors,
-    };
-    const pathURL = btoa(JSON.stringify(structureToURL));
-    window.history.pushState({}, "", `/modeler/${pathURL}`);
+      connectors: useStore.getState().connectors
+    }
+    const pathURL = btoa(JSON.stringify(structureToURL))
+    window.history.pushState({}, '', `/modeler/${pathURL}`)
   },
-  setAtomById: (id, pos, rad, color ) => {
+  setAtomById: (id, pos, rad, color) => {
     set((state) => ({
       atoms: state.atoms.map((atom) => {
         if (atom.id === id) {
           return {
             ...atom,
-            pos: pos,
-            rad: rad,
-            color: color,
-          };
+            pos,
+            rad,
+            color
+          }
         }
-        return atom;
-      }),
-    }));
+        return atom
+      })
+    }))
     const structureToURL = {
       atoms: useStore.getState().atoms,
-      connectors: useStore.getState().connectors,
-    };
-    const pathURL = btoa(JSON.stringify(structureToURL));
-    window.history.pushState({}, "", `/modeler/${pathURL}`);
+      connectors: useStore.getState().connectors
+    }
+    const pathURL = btoa(JSON.stringify(structureToURL))
+    window.history.pushState({}, '', `/modeler/${pathURL}`)
   },
   removeAtom: (x, y, z) => {
     set((state) => ({
       atoms: state.atoms.filter((atom) => {
-        const [X, Y, Z] = atom.pos;
-        return X !== x || Y !== y || Z !== z;
-      }),
-    }));
+        const [X, Y, Z] = atom.pos
+        return X !== x || Y !== y || Z !== z
+      })
+    }))
     const structureToURL = {
       atoms: useStore.getState().atoms,
-      connectors: useStore.getState().connectors,
-    };
-    const pathURL = btoa(JSON.stringify(structureToURL));
-    window.history.pushState({}, "", `/modeler/${pathURL}`);
+      connectors: useStore.getState().connectors
+    }
+    const pathURL = btoa(JSON.stringify(structureToURL))
+    window.history.pushState({}, '', `/modeler/${pathURL}`)
   },
   addConnector: (startPoint, endPoint) => {
     set((state) => ({
@@ -81,26 +81,26 @@ export const useStore = create((set, get) => ({
         {
           id: nanoid(),
           startPoint,
-          endPoint,
-        },
-      ],
-    }));
+          endPoint
+        }
+      ]
+    }))
     const structureToURL = {
       atoms: useStore.getState().atoms,
-      connectors: useStore.getState().connectors,
-    };
-    const pathURL = btoa(JSON.stringify(structureToURL));
-    window.history.pushState({}, "", `/modeler/${pathURL}`);
+      connectors: useStore.getState().connectors
+    }
+    const pathURL = btoa(JSON.stringify(structureToURL))
+    window.history.pushState({}, '', `/modeler/${pathURL}`)
   },
   removeConnector: (id) => {
     set((state) => ({
-      connectors: state.connectors.filter((connector) => connector.id !== id),
-    }));
+      connectors: state.connectors.filter((connector) => connector.id !== id)
+    }))
     const structureToURL = {
       atoms: useStore.getState().atoms,
-      connectors: useStore.getState().connectors,
-    };
-    const pathURL = btoa(JSON.stringify(structureToURL));
-    window.history.pushState({}, "", `/modeler/${pathURL}`);
-  },
-}));
+      connectors: useStore.getState().connectors
+    }
+    const pathURL = btoa(JSON.stringify(structureToURL))
+    window.history.pushState({}, '', `/modeler/${pathURL}`)
+  }
+}))

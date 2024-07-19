@@ -11,7 +11,7 @@ export function Molecule() {
   ]);
 
   useEffect(() => {
-    console.log(atoms);
+    // console.log(atoms);
   }, [atoms]);
 
   return (
