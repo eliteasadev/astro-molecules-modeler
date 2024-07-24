@@ -1,5 +1,6 @@
 ---
 import InorganicMolecules from "@/modeler/data/inorganic-molecules";
+import PharmaceuticalBioactiveMolecules from "@/modeler/data/pharmaceutical-bioactive-molecules";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,6 +9,17 @@ import Layout from "../layouts/Layout.astro";
     <h1 class="text-3xl font-bold">Moleculas inorganicas</h1>
     {
       InorganicMolecules.map((data) => (
+        <a
+          class="text-xl btn btn-outline"
+          href={`/modeler/${btoa(JSON.stringify(data.molecule))}`}
+        >
+          {data.name}
+        </a>
+      ))
+    }
+    <h1 class="text-3xl font-bold">Moléculas Farmacéuticas y Bioactivas</h1>
+    {
+      PharmaceuticalBioactiveMolecules.map((data) => (
         <a
           class="text-xl btn btn-outline"
           href={`/modeler/${btoa(JSON.stringify(data.molecule))}`}

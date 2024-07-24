@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # molecules examples
 examples
+src/nodeler/data/examples
