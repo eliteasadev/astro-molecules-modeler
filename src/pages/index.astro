@@ -5,12 +5,18 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="FESA Molecule modeler - Home">
   <div class="flex flex-col items-center justify-center">
     <!-- HERO -->
-    <div class="flex items-center mt-32 mb-32">
-      <div>
-        <h1 class="text-5xl font-bold text-pretty max-w-screen-sm text-white">
+    <div
+      class="flex flex-col md:flex-row items-center my-12 md:mt-20 md:mb-32 lg:p-9"
+    >
+      <div class="flex flex-col items-center md:items-start">
+        <h1
+          class="text-2xl md:text-5xl font-bold text-pretty max-w-screen-sm text-white text-center md:text-left"
+        >
           Modela moleculas de manera intuitiva y fácil.
         </h1>
-        <h2 class="mt-4 text-xl font-light text-pretty max-w-lg text-white">
+        <h2
+          class="mt-4 text-md md:text-xl font-light text-pretty max-w-lg text-white text-center md:text-left"
+        >
           Nuestro modelador de moléculas permite a los estudiantes y profesores
           visualizar, y analizar estructuras moleculares de manera sencilla.
         </h2>
@@ -23,21 +29,29 @@ import Layout from "../layouts/Layout.astro";
       <img
         src="/modeler.png"
         alt="modeler"
-        class="mt-14 max-w-lg rounded-md pb-6"
+        class="mt-14 max-w-xs md:max-w-lg rounded-md pb-6"
       />
     </div>
 
     <!-- FAQ -->
-    <div class="flex flex-col items-center pt-32 pb-32 bg-slate-900 w-full">
+    <div class="flex flex-col items-center py-32 bg-slate-900 w-full">
       <p class="mb-4">Caracteristicas</p>
-      <h2 class="text-4xl font-semibold text-white">
+      <h2
+        class="text-xl text-pretty md:text-4xl font-semibold text-white text-center md:text-left mb-4"
+      >
         Potente herramienta para modelado molecular
       </h2>
       <!-- Key Features -->
-      <div class="flex flex-row justify-center gap-20 mt-4">
+      <div
+        class="flex flex-col md:flex-row justify-center gap-10 md:gap-20 mt-4"
+      >
         <!-- Visualización 3D -->
         <div class="flex flex-col justify-center gap-4 items-center">
-          <h2 class="text-2xl text-white">Visualización 3D</h2>
+          <h2
+            class="text-md font-semibold md:text-2xl md:font-normal text-white"
+          >
+            Visualización 3D
+          </h2>
           <p class="max-w-xs text-center">
             Con la ayuda de la biblioteca Threejs se puede interactuar en 3D con
             el modelo deseado.
@@ -45,7 +59,11 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <!-- Colaboración -->
         <div class="flex flex-col justify-center gap-4 items-center">
-          <h2 class="text-2xl text-white">Colaboración</h2>
+          <h2
+            class="text-md font-semibold md:text-2xl md:font-normal text-white"
+          >
+            Colaboración
+          </h2>
           <p class="max-w-xs text-center">
             No necesitas exportar el modelo para compartirlo con otros.
             Siemplemente comparte el link de la aplicación para que otros puedan
@@ -54,7 +72,11 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <!-- Customización -->
         <div class="flex flex-col justify-center gap-4 items-center">
-          <h2 class="text-2xl text-white">Customización</h2>
+          <h2
+            class="text-md font-semibold md:text-2xl md:font-normal text-white"
+          >
+            Customización
+          </h2>
           <p class="max-w-xs text-center">
             Puedes modificar cualquiera de los modelos ya existentes o que hayas
             creado en cualquier momento solo conservando el link.
@@ -66,40 +88,54 @@ import Layout from "../layouts/Layout.astro";
     <!-- EXAMPLES -->
     <div class="flex flex-col items-center pt-32 pb-32">
       <div class="badge badge-outline">Ejemplos de moleculas</div>
-      <h2 class="text-4xl font-semibold text-white pt-4">
+      <h2
+        class="text-xl text-pretty md:text-4xl font-semibold text-white pt-4 mb-4"
+      >
         Explora estructuras moleculares
       </h2>
-      <p class="max-w-md text-center text-pretty">
+      <p class="max-w-xs md:max-w-sm text-center text-pretty">
         Eche un vistazo a algunas de las complejas estructuras moleculares que
         se han creado y analizado utilizando nuestro potente modelador de
         moléculas.
       </p>
 
       <!-- Examples -->
-      <div class="flex items-center gap-20">
-        <div>
-          <div class="mb-4">
-            <a href="#" class="text-2xl text-white font-semibold">Cafeina</a>
-            <p class="max-w-sm text-pretty text-start mt-1">
+      <div class="flex flex-col md:flex-row items-center md:gap-20">
+        <div class="flex flex-col md:gap-4 mt-4 md:mt-0">
+          <a class="mb-4">
+            <p
+              class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
+            >
+              Cafeina
+            </p>
+            <p class="max-w-xs md:max-w-sm text-pretty text-start mt-1 md:mt-0">
               Visualice la compleja estructura molecular de la cafeína, un
               estimulante que se encuentra en el café, el té y otras bebidas.
             </p>
-          </div>
+          </a>
 
-          <div class="mb-4">
-            <a href="#" class="text-2xl text-white font-semibold">Epinefrina</a>
-            <p class="max-w-sm text-pretty text-start mt-1">
+          <a class="mb-4">
+            <p
+              class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
+            >
+              Epinefrina
+            </p>
+            <p class="max-w-xs md:max-w-sm text-pretty text-start mt-1">
               Aumenta la frecuencia cardíaca, contrae los vasos sanguíneos y
               dilata las vías respiratorias.
             </p>
-          </div>
+          </a>
 
           <a
             href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuMyIsImNvbG9yIjoiIzJmYTRlNyJ9LHsiaWQiOiJkY0E4WTBUSElfaGFYZzR2THUwOUkiLCJwb3MiOlsiLTAuNiIsIi0wLjYiLCIwIl0sInJhZCI6IjAuMiIsImNvbG9yIjoiI2ZmZmZmZiJ9LHsiaWQiOiI0d3drU19sWVZmdU5oRFF0NEtINWMiLCJwb3MiOlsiMC42IiwiLTAuNiIsIjAiXSwicmFkIjoiMC4yIiwiY29sb3IiOiIjZmZmZmZmIn1dLCJjb25uZWN0b3JzIjpbeyJpZCI6Inp3WS1fUWE1eGY3R1paNlg1WEJrViIsInN0YXJ0UG9pbnQiOlsiLTAuNiIsIi0wLjYiLCIwIl0sImVuZFBvaW50IjpbIjAiLCIwIiwiMCJdfSx7ImlkIjoiaDdiaWFaR3BzMU5OSHRiUVlxa2lwIiwic3RhcnRQb2ludCI6WyIwLjYiLCItMC42IiwiMCJdLCJlbmRQb2ludCI6WyIwIiwiMCIsIjAiXX1dfQ"
             class=""
           >
-            <p class="text-2xl text-white font-semibold">Agua</p>
-            <p class="max-w-sm text-pretty text-start mt-1">
+            <p
+              class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
+            >
+              Agua
+            </p>
+            <p class="max-w-xs md:max-w-sm text-pretty text-start mt-1">
               Esta molécula es esencial en la vida de los seres vivos, al servir
               de medio para el metabolismo de las biomoléculas
             </p>
@@ -108,7 +144,7 @@ import Layout from "../layouts/Layout.astro";
         <img
           src="/modeler.png"
           alt="modeler"
-          class="mt-14 max-w-lg rounded-md pb-6"
+          class="mt-10 md:mt-14 max-w-xs md:max-w-lg rounded-md pb-6"
         />
       </div>
     </div>
