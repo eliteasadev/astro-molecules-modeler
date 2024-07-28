@@ -7,7 +7,7 @@ export function MoleculesTemplates() {
   return (
     <div className="grid grid-cols-4 gap-4 px-4">
       <div className="hidden md:block">
-        <ul className="menu menu-vertical px-1">
+        <ul className="menu menu-vertical px-1 flex flex-col gap-1">
           <li>
             <button
               onClick={() => {

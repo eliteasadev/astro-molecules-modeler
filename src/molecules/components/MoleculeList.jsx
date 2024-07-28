@@ -5,13 +5,11 @@ export function MoleculeList(moleculeType) {
       return (
         <>
           <h1 className="text-3xl font-bold">Moléculas Inorgánicas</h1>
-          <div className="flex flex-col gap-4 m-8 ">
+          <div className="m-8 grid grid-cols-2 md:grid-cols-3 gap-4">
             {inorganicMolecules.map(({ name, molecule }) => (
-              <div key={name} className="text-xl btn btn-outline">
-                <a href={`/modeler/${btoa(JSON.stringify(molecule))}`}>
+              <a key={name} className="text-xl btn btn-outline" href={`/modeler/${btoa(JSON.stringify(molecule))}`}>
                   {name}
                 </a>
-              </div>
             ))}
           </div>
         </>
@@ -22,13 +20,11 @@ export function MoleculeList(moleculeType) {
           <h1 className="text-3xl font-bold">
             Moléculas Farmacéuticas y Bioactivas
           </h1>
-          <div className="flex flex-col gap-4 m-8 ">
+          <div className="m-8 grid grid-cols-2 md:grid-cols-3 gap-4">
             {bioactiveMolecules.map(({ name, molecule }) => (
-              <div key={name} className="text-xl btn btn-outline">
-                <a href={`/modeler/${btoa(JSON.stringify(molecule))}`}>
+                <a key={name} className="text-xl btn btn-outline" href={`/modeler/${btoa(JSON.stringify(molecule))}`}>
                   {name}
                 </a>
-              </div>
             ))}
           </div>
         </>
