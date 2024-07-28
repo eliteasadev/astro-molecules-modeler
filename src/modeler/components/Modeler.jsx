@@ -11,6 +11,17 @@ import { AtomProperties } from "./AtomProperties";
 import OptionsPanel from "./ui/Options";
 
 export default function ModelerComponent() {
+  // Get the size of the screen
+  const [screenType, setScreenType] = useState("desktop");
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 1024) {
+      setScreenType("mobile");
+    } else {
+      setScreenType("desktop");
+    }
+  }, []);
+
   const [atoms, setAtoms, setConnectors] = useAtoms((state) => [
     state.atoms,
     state.setAtoms,
@@ -41,7 +52,7 @@ export default function ModelerComponent() {
         <group position={[0, -0.65, 0]}>
           <Physics>
             <Molecule />
-            <GroundComponent />
+            {screenType === "desktop" && <GroundComponent />}
           </Physics>
           <RandomizedLight amount={8} radius={5} ambient={0.5} bias={0.001} />
         </group>
