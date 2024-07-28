@@ -208,7 +208,7 @@ const acidoAcetilSalicilico = {
 }
 
 const paracetamol = {
-  name: 'Ácido Acetilsalicílico',
+  name: 'Paracetamol',
   molecule: {
     atoms: [
       {
@@ -390,7 +390,7 @@ const paracetamol = {
   }
 }
 
-export default [
+export const bioactiveMolecules = [
   acidoAcetilSalicilico,
   paracetamol
 ]

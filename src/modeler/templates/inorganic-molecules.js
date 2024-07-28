@@ -817,7 +817,7 @@ const monoxidoDeCarbono = {
     ]
   }
 }
-export default [
+export const inorganicMolecules = [
   acidoCloridrico,
   acidoNitrico,
   acidoSulfurico,

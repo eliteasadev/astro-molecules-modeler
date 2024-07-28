@@ -1,16 +1,16 @@
-import { create } from "zustand";
+import { create } from 'zustand'
 
 export const useStore = create((set, get) => ({
-  options: "Options",
+  options: 'Options',
   atomSelected: {},
   setAtomSelected: (atomSelected) => {
     set((state) => ({
-      atomSelected,
-    }));
+      atomSelected
+    }))
   },
   setOptions: (options) => {
     set((state) => ({
-      options,
-    }));
-  },
-}));
+      options
+    }))
+  }
+}))
