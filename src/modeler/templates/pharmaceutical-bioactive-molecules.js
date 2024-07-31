@@ -1,132 +1,111 @@
-// Ácido acetilsalicílico (aspirina) (C₉H₈O₄)
-// Paracetamol (acetaminofén) (C₈H₉NO₂)
-// Ibuprofeno (C₁₃H₁₈O₂)
-// Penicilina (C₁₆H₁₈N₂O₄S)
-// Amoxicilina (C₁₆H₁₉N₃O₅S)
-// Tetraciclina (C₂₂H₂₄N₂O₈)
-// Cloroquina (C₁₈H₂₆ClN₃)
-// Aspirina (C₉H₈O₄)
-// Diazepam (C₁₆H₁₃ClN₂O)
-// Morfina (C₁₇H₁₉NO₃)
-// Cocaína (C₁₇H₂₁NO₄)
-// Cafeína (C₈H₁₀N₄O₂)
-// Nicotina (C₁₀H₁₄N₂)
-// Heroína (C₂₁H₂₃NO₅)
-// Tetrahidrocannabinol (THC) (C₂₁H₃₀O₂)
-// Estradiol (C₁₈H₂₄O₂)
-// Progesterona (C₂₁H₃₀O₂)
-// Testosterona (C₁₉H₂₈O₂)
-// Adrenalina (C₉H₁₃NO₃)
-// Serotonina (C₁₀H₁₂N₂O)
-
 const acidoAcetilSalicilico = {
   name: 'Ácido Acetilsalicílico',
   molecule: {
     atoms: [
       {
-        id: 'c1',
+        id: 'C1',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c2',
+        id: 'C2',
         pos: ['1.4', '0', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c3',
+        id: 'C3',
         pos: ['2.1', '1.2', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c4',
+        id: 'C4',
         pos: ['1.4', '2.4', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c5',
+        id: 'C5',
         pos: ['0', '2.4', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c6',
+        id: 'C6',
         pos: ['-0.7', '1.2', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c7',
+        id: 'C7',
         pos: ['-1.4', '1.2', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c8',
+        id: 'C8',
         pos: ['-1.4', '0', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'c9',
+        id: 'C9',
         pos: ['-0.7', '-0.8', '0'],
         rad: '0.4',
         color: '#000000'
       },
       {
-        id: 'o1',
+        id: 'O1',
         pos: ['1.9', '2.4', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'o2',
+        id: 'O2',
         pos: ['2.8', '1.6', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'o3',
+        id: 'O3',
         pos: ['2.8', '0.8', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'o4',
+        id: 'O4',
         pos: ['1.9', '-0.2', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'o5',
+        id: 'O5',
         pos: ['0.7', '-0.8', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'o6',
+        id: 'O6',
         pos: ['-0.7', '0.8', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'h1',
+        id: 'H1',
         pos: ['-1.8', '0', '0'],
         rad: '0.2',
         color: '#FFFFFF'
       },
       {
-        id: 'h2',
+        id: 'H2',
         pos: ['-2.0', '-1.2', '0'],
         rad: '0.2',
         color: '#FFFFFF'
       },
       {
-        id: 'h3',
+        id: 'H3',
         pos: ['-0.4', '-1.2', '0'],
         rad: '0.2',
         color: '#FFFFFF'
@@ -212,25 +191,25 @@ const paracetamol = {
   molecule: {
     atoms: [
       {
-        id: 'c1',
+        id: 'C1',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#000000' // Carbono
       },
       {
-        id: 'c2',
+        id: 'C2',
         pos: ['1.2', '0', '0'],
         rad: '0.4',
         color: '#000000' // Carbono
       },
       {
-        id: 'c3',
+        id: 'C3',
         pos: ['1.8', '1.2', '0'],
         rad: '0.4',
         color: '#000000' // Carbono
       },
       {
-        id: 'c4',
+        id: 'C4',
         pos: ['0.6', '2.0', '0'],
         rad: '0.4',
         color: '#000000' // Carbono

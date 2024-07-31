@@ -1,58 +1,25 @@
 const agua = {
   name: 'H₂O',
-  molecule: {
-    atoms: [
-      {
-        id: 'hx1',
-        pos: ['0', '0', '0'],
-        rad: '0.3',
-        color: '#2fa4e7'
-      },
-      {
-        id: 'dcA8Y0THI_haXg4vLu09I',
-        pos: ['-0.6', '-0.6', '0'],
-        rad: '0.2',
-        color: '#ffffff'
-      },
-      {
-        id: '4wwkS_lYVfuNhDQt4KH5c',
-        pos: ['0.6', '-0.6', '0'],
-        rad: '0.2',
-        color: '#ffffff'
-      }
-    ],
-    connectors: [
-      {
-        id: 'zwY-_Qa5xf7GZZ6X5XBkV',
-        startPoint: ['-0.6', '-0.6', '0'],
-        endPoint: ['0', '0', '0']
-      },
-      {
-        id: 'h7biaZGps1NNHtbQYqkip',
-        startPoint: ['0.6', '-0.6', '0'],
-        endPoint: ['0', '0', '0']
-      }
-    ]
-  }
+  molecule: { atoms: [{ id: 'O', pos: ['0', '0', '0'], rad: '0.3', color: '#2fa4e7' }, { id: 'H1', pos: ['-0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' }, { id: 'H2', pos: ['0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' }], connectors: [{ id: 'zwY-_Qa5xf7GZZ6X5XBkV', startPoint: ['-0.6', '-0.6', '0'], endPoint: ['0', '0', '0'] }, { id: 'h7biaZGps1NNHtbQYqkip', startPoint: ['0.6', '-0.6', '0'], endPoint: ['0', '0', '0'] }] }
 }
 const dioxidoDeCarbono = {
   name: 'CO₂',
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'C',
         pos: ['0', '0', '0'],
         rad: '0.3',
         color: '#000000'
       },
       {
-        id: 'dcA8Y0THI_haXg4vLu09I',
+        id: 'O1',
         pos: ['-0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '4wwkS_lYVfuNhDQt4KH5c',
+        id: 'O2',
         pos: ['0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ff0000'
@@ -77,25 +44,25 @@ const amoniaco = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'N',
         pos: ['0', '0', '0'],
         rad: '0.3',
         color: '#0040ff'
       },
       {
-        id: 'dcA8Y0THI_haXg4vLu09I',
+        id: 'H1',
         pos: ['-0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: '4wwkS_lYVfuNhDQt4KH5c',
+        id: 'H2',
         pos: ['0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: '5ptojKuyR5J7O9sel42Yt',
+        id: 'H3',
         pos: ['0', '0.8', '0'],
         rad: '0.2',
         color: '#ffffff'
@@ -125,43 +92,43 @@ const acidoSulfurico = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'S',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#fffd55'
       },
       {
-        id: '0vJ2u4bAAPCZIBvITrN17',
+        id: 'O1',
         pos: ['-0.8', '0', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '1Jvb1eeaUSxGM149QDC3L',
+        id: 'O2',
         pos: ['0.8', '0', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: 'LGDfUU0qU3zTLvY-_0o86',
+        id: 'H1',
         pos: ['1.4', '0', '0'],
         rad: '0.1',
         color: '#ffffff'
       },
       {
-        id: 'lIT9bBc4kHm8sOv3B94r2',
+        id: 'H2',
         pos: ['-1.4', '0', '0'],
         rad: '0.1',
         color: '#ffffff'
       },
       {
-        id: 'DCnk8UAGqtvhVlCD5DS16',
+        id: 'O3',
         pos: ['0', '0.8', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: 'cM0rZzG_IV3l7LxdJbZO3',
+        id: 'O4',
         pos: ['0', '-0.8', '0'],
         rad: '0.2',
         color: '#ff0000'
@@ -206,13 +173,13 @@ const cloruroDeSodio = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'Na',
         pos: ['-0.6', '0', '0'],
         rad: '0.4',
         color: '#6600ff'
       },
       {
-        id: 'dwWqtqdftFydXlZWAPjrj',
+        id: 'Cl',
         pos: ['0.6', '0', '0'],
         rad: '0.4',
         color: '#1eff00'
@@ -232,31 +199,31 @@ const acidoNitrico = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'N',
         pos: ['0', '0', '0'],
         rad: '0.3',
         color: '#0040ff'
       },
       {
-        id: 'dcA8Y0THI_haXg4vLu09I',
+        id: 'O1',
         pos: ['-0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '4wwkS_lYVfuNhDQt4KH5c',
+        id: 'O2',
         pos: ['0.6', '-0.6', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '5ptojKuyR5J7O9sel42Yt',
+        id: 'O3',
         pos: ['0', '0.8', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '0b0IEm8b3T12kwzXuYKM1',
+        id: 'H',
         pos: ['1.2', '0', '0'],
         rad: '0.15',
         color: '#ffffff'
@@ -306,13 +273,13 @@ const oxidoDeCalcio = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'O',
         pos: ['-0.6', '0', '0'],
         rad: '0.4',
         color: '#ff0000'
       },
       {
-        id: 'dwWqtqdftFydXlZWAPjrj',
+        id: 'Ca',
         pos: ['0.6', '0', '0'],
         rad: '0.4',
         color: '#1eff00'
@@ -332,19 +299,19 @@ const hidroxidoDeSodio = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'O',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#ff0000'
       },
       {
-        id: 'L_RtCInXcBfIMYzPR_nOa',
+        id: 'H',
         pos: ['0.6', '0.6', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'htFxbciNVZQlDYxJypXdt',
+        id: 'Na',
         pos: ['-1.2', '1.2', '0'],
         rad: '0.3',
         color: '#6600ff'
@@ -369,55 +336,55 @@ const nitratoDeAmonio = {
   molecule: {
     atoms: [
       {
-        id: 'hx1',
+        id: 'N1',
         pos: ['-2', '0', '0'],
         rad: '0.4',
         color: '#39e736'
       },
       {
-        id: '0zAiY8Gm8SeGVPanT1nIV',
+        id: 'N2',
         pos: ['1', '0', '0'],
         rad: '0.4',
         color: '#32e632'
       },
       {
-        id: 'dAw-P1ZU5QzIhPZpYvuQv',
+        id: 'H1',
         pos: ['-2', '1', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'Z_eiwCDRL8N4evrnw_xbo',
+        id: 'H2',
         pos: ['-2', '-0.8', '0.8'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: '4nI6u4yLrr3PR7GJvLgue',
+        id: 'H3',
         pos: ['-3', '-0.8', '-0.4'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'MUU7XmzLOE50C_Khdx-dH',
+        id: 'H4',
         pos: ['-1', '-0.8', '-0.4'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'QUUVk_bJHssZPpVSjmp40',
+        id: 'O1',
         pos: ['1', '1', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: 'NIyEmUbgYUQqFJgp7Mygm',
+        id: 'O2',
         pos: ['0.2', '-0.8', '0'],
         rad: '0.2',
         color: '#ff0000'
       },
       {
-        id: '0b-88qFnIVYcTEqq_1r6x',
+        id: 'O3',
         pos: ['1.8', '-0.8', '0'],
         rad: '0.2',
         color: '#ff0000'
@@ -467,13 +434,13 @@ const acidoCloridrico = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'H',
         pos: ['-0.5', '0', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'atom2',
+        id: 'Cl',
         pos: ['0.5', '0', '0'],
         rad: '0.4',
         color: '#00ff00'
@@ -493,25 +460,25 @@ const peroxidoDeHidrogeno = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'H1',
         pos: ['-1', '0', '0'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'atom2',
+        id: 'O1',
         pos: ['-0.4', '0', '0'],
         rad: '0.3',
         color: '#2fa4e7'
       },
       {
-        id: 'atom3',
+        id: 'O2',
         pos: ['0.4', '0', '0'],
         rad: '0.3',
         color: '#2fa4e7'
       },
       {
-        id: 'atom4',
+        id: 'H2',
         pos: ['1', '0', '0'],
         rad: '0.2',
         color: '#ffffff'
@@ -541,31 +508,31 @@ const metano = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'C',
         pos: ['0', '0', '0'],
         rad: '0.3',
         color: '#000000'
       },
       {
-        id: 'atom2',
+        id: 'H1',
         pos: ['1', '1', '1'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'atom3',
+        id: 'H2',
         pos: ['-1', '-1', '1'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'atom4',
+        id: 'H3',
         pos: ['-1', '1', '-1'],
         rad: '0.2',
         color: '#ffffff'
       },
       {
-        id: 'atom5',
+        id: 'H4',
         pos: ['1', '-1', '-1'],
         rad: '0.2',
         color: '#ffffff'
@@ -600,13 +567,13 @@ const nitrogeno = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'N1',
         pos: ['-0.5', '0', '0'],
         rad: '0.3',
         color: '#0000FF'
       },
       {
-        id: 'atom2',
+        id: 'N2',
         pos: ['0.5', '0', '0'],
         rad: '0.3',
         color: '#0000FF'
@@ -626,13 +593,13 @@ const oxigeno = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'O1',
         pos: ['-0.6', '0', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'atom2',
+        id: 'O2',
         pos: ['0.6', '0', '0'],
         rad: '0.3',
         color: '#FF0000'
@@ -652,19 +619,19 @@ const oxidoNitroso = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'N1',
         pos: ['-1', '0', '0'],
         rad: '0.3',
         color: '#0000FF'
       },
       {
-        id: 'atom2',
+        id: 'N2',
         pos: ['0', '0', '0'],
         rad: '0.3',
         color: '#0000FF'
       },
       {
-        id: 'atom3',
+        id: 'O',
         pos: ['1', '0', '0'],
         rad: '0.3',
         color: '#FF0000'
@@ -689,19 +656,19 @@ const dioxidoDeAzufre = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'S',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#FFD700'
       },
       {
-        id: 'atom2',
+        id: 'O1',
         pos: ['1', '1', '0'],
         rad: '0.3',
         color: '#FF0000'
       },
       {
-        id: 'atom3',
+        id: 'O2',
         pos: ['-1', '1', '0'],
         rad: '0.3',
         color: '#FF0000'
@@ -726,37 +693,37 @@ const bicarbonatoDeSodio = {
   molecule: {
     atoms: [
       {
-        id: 'na',
+        id: 'Na',
         pos: ['-1.2', '-0.6', '0'],
         rad: '0.4',
         color: '#7300ff'
       },
       {
-        id: 'o3',
+        id: 'O1',
         pos: ['-0.8', '0.6', '0'],
         rad: '0.3',
         color: '#00ff32'
       },
       {
-        id: 'c1',
+        id: 'C1',
         pos: ['0', '0', '0'],
         rad: '0.4',
         color: '#FF0000'
       },
       {
-        id: 'o1',
+        id: 'O2',
         pos: ['0.6', '0.6', '0'],
         rad: '0.3',
         color: '#00ff32'
       },
       {
-        id: 'o2',
+        id: 'O3',
         pos: ['0.6', '-0.6', '0'],
         rad: '0.3',
         color: '#00ff32'
       },
       {
-        id: 'h',
+        id: 'H',
         pos: ['1.2', '1.2', '0'],
         rad: '0.2',
         color: '#ffffff'
@@ -796,13 +763,13 @@ const monoxidoDeCarbono = {
   molecule: {
     atoms: [
       {
-        id: 'atom1',
+        id: 'C',
         pos: ['-0.5', '0', '0'],
         rad: '0.3',
         color: '#000000'
       },
       {
-        id: 'atom2',
+        id: 'O',
         pos: ['0.5', '0', '0'],
         rad: '0.3',
         color: '#FF0000'
