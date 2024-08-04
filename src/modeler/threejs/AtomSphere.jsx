@@ -36,7 +36,9 @@ export function AtomSphereComponent({ id, center, radius, color }) {
             addConnector(connector, center);
             setConnector([]);
           }
-        } else if (e.shiftKey) {
+        } else if (e.shiftKey && connector.length !== 0) {
+
+        } else if (e.altKey) {
           removeAtom(...center);
         } else {
           setAtomSelected({ id: id, pos: center, rad: radius, color });
