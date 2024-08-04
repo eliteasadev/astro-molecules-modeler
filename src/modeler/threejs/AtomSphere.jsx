@@ -3,6 +3,8 @@ import { useSphere } from "@react-three/cannon";
 import { useStore as useAtoms } from "../store/three";
 import { useStore as useUI } from "../store/ui";
 
+const CONNECTOR_GAP = 0.04;
+
 export function AtomSphereComponent({ id, center, radius, color }) {
   const [connector, setConnector, addConnector, removeAtom] = useAtoms(
     (state) => [
@@ -37,7 +39,20 @@ export function AtomSphereComponent({ id, center, radius, color }) {
             setConnector([]);
           }
         } else if (e.shiftKey && connector.length !== 0) {
-
+          addConnector(connector, center);
+          addConnector(
+            [
+              connector[0] - CONNECTOR_GAP,
+              connector[1] - CONNECTOR_GAP,
+              connector[2] - CONNECTOR_GAP,
+            ],
+            [
+              center[0] - CONNECTOR_GAP,
+              center[1] - CONNECTOR_GAP,
+              center[2] - CONNECTOR_GAP,
+            ]
+          );
+          setConnector([]);
         } else if (e.altKey) {
           removeAtom(...center);
         } else {

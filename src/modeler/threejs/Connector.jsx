@@ -27,7 +27,7 @@ export function Connector({ startPoint, endPoint, id }) {
     false
   );
 
-  const tubeMaterial = new THREE.MeshBasicMaterial({ color: 0xfc031c });
+  const tubeMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
   const tube = new THREE.Mesh(tubeGeometry, tubeMaterial);
 
   return (
