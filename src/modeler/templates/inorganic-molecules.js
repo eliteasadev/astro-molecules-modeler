@@ -1,6 +1,24 @@
 const agua = {
   name: 'H₂O',
-  molecule: { atoms: [{ id: 'O', pos: ['0', '0', '0'], rad: '0.3', color: '#2fa4e7' }, { id: 'H1', pos: ['-0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' }, { id: 'H2', pos: ['0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' }], connectors: [{ id: 'zwY-_Qa5xf7GZZ6X5XBkV', startPoint: ['-0.6', '-0.6', '0'], endPoint: ['0', '0', '0'] }, { id: 'h7biaZGps1NNHtbQYqkip', startPoint: ['0.6', '-0.6', '0'], endPoint: ['0', '0', '0'] }] }
+  molecule: {
+    atoms: [
+      { id: 'O', pos: ['0', '0', '0'], rad: '0.3', color: '#2fa4e7' },
+      { id: 'H1', pos: ['-0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' },
+      { id: 'H2', pos: ['0.6', '-0.6', '0'], rad: '0.2', color: '#ffffff' }
+    ],
+    connectors: [
+      {
+        id: 'zwY-_Qa5xf7GZZ6X5XBkV',
+        startPoint: ['-0.6', '-0.6', '0'],
+        endPoint: ['0', '0', '0']
+      },
+      {
+        id: 'h7biaZGps1NNHtbQYqkip',
+        startPoint: ['0.6', '-0.6', '0'],
+        endPoint: ['0', '0', '0']
+      }
+    ]
+  }
 }
 const dioxidoDeCarbono = {
   name: 'CO₂',
@@ -784,7 +802,69 @@ const monoxidoDeCarbono = {
     ]
   }
 }
+const ozone = {
+  name: 'O₃',
+  molecule: {
+    atoms: [
+      {
+        id: 'O1',
+        pos: ['1', '0', '0'],
+        rad: '0.5',
+        color: '#ec5dba'
+      },
+      {
+        id: 'O2',
+        pos: ['-1', '0', '0'],
+        rad: '0.5',
+        color: '#fb65a1'
+      },
+      {
+        id: 'O3',
+        pos: ['0', '1', '0'],
+        rad: '0.5',
+        color: '#df6daf'
+      }
+    ],
+    connectors: [
+      {
+        id: 'nH96CFJaG5GvWe6rJ--Rr',
+        startPoint: ['-1', '0', '0'],
+        endPoint: ['0', '1', '0']
+      },
+      {
+        id: 'UxpxD4MU5v4mb6NbzyWEV',
+        startPoint: ['1', '0', '0'],
+        endPoint: ['0', '1', '0']
+      }
+    ]
+  }
+}
+
+const cloro = {
+  name: 'Cl₂',
+  molecule: {
+    atoms: [
+      { id: 'Cl', pos: ['-1', '0', '0'], rad: '0.5', color: '#36e75a' },
+      {
+        id: 'Cl',
+        pos: ['1', '0', '0'],
+        rad: '0.5',
+        color: '#3ae95d'
+      }
+    ],
+    connectors: [
+      {
+        id: 'NvrNg1DaDV91Cbj5l4aWR',
+        startPoint: ['-1', '0', '0'],
+        endPoint: ['1', '0', '0']
+      }
+    ]
+  }
+}
+
 export const inorganicMolecules = [
+  ozone,
+  cloro,
   acidoCloridrico,
   acidoNitrico,
   acidoSulfurico,

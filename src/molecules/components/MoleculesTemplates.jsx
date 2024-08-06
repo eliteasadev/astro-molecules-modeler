@@ -26,6 +26,15 @@ export function MoleculesTemplates() {
               Moléculas Farmacéuticas y Bioactivas
             </button>
           </li>
+          <li>
+            <button
+              onClick={() => {
+                setMoleculeType("organic");
+              }}
+            >
+              Moléculas Orgánicas
+            </button>
+          </li>
         </ul>
       </div>
       <div className="grid col-span-4 md:col-span-3 " key={moleculeType}>
