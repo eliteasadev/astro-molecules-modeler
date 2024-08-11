@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { Cross } from "../../icons/Cross";
-import { useStore as useUI } from "../../store/ui";
 import { useStore as useAtoms } from "../../store/three";
-import { useEffect, useState } from "react";
+import { useStore as useUI } from "../../store/ui";
 
 export function CreateAtom() {
   const [setOptions] = useUI((state) => [state.setOptions]);

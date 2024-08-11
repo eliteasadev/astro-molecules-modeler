@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import { useStore } from "../../store/ui";
 import AtomIcon from "../../icons/Atom";
-import ConnectionIcon from "../../icons/Connection";
-import { Cross } from "../../icons/Cross";
+import { useStore } from "../../store/ui";
 import { CreateAtom } from "./AtomOption";
-import { ConnectorOption } from "./ConnectorOption";
 
 export default function OptionsPanel() {
   const [options, setOptions] = useStore((state) => [
@@ -31,16 +28,6 @@ export default function OptionsPanel() {
           >
             <AtomIcon />
           </button>
-          {/* <button
-            onClick={(e) => {
-              e.preventDefault();
-              setOptions("Connection");
-            }}
-            title="Agregar átomo"
-            className="p-2 bg-emerald-600 hover:bg-emerald-400 rounded-sm"
-          >
-            <ConnectionIcon />
-          </button> */}
         </form>
       );
     case "Atom":

@@ -42,16 +42,16 @@ export default function ModelerComponent() {
   }, [atoms]);
 
   return (
-    <div className="h-screen" key={renderKey}>
+    <div className="h-screen" >
       {/* Controls canvas */}
       <OptionsPanel />
       <AtomProperties />
 
       {/* Modeler Canvas */}
-      <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
+      <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }} >
         <group position={[0, -0.65, 0]}>
           <Physics>
-            <Molecule />
+            <Molecule key={renderKey}/>
             {screenType === "desktop" && <GroundComponent />}
           </Physics>
           <RandomizedLight amount={8} radius={5} ambient={0.5} bias={0.001} />
