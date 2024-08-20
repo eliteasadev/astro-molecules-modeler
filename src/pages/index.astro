@@ -1,4 +1,5 @@
 ---
+import Footer from "@/ui/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -21,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
           visualizar, y analizar estructuras moleculares de manera sencilla.
         </h2>
         <a
-          class="btn btn-accent mt-4"
+          class="btn btn-accent mt-4 hover:scale-105 transition-transform duration-200 ease-in-out"
           href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuNSIsImNvbG9yIjoiIzJmYTRlNyJ9XSwiY29ubmVjdG9ycyI6W119"
           >Modela</a
         >
@@ -102,7 +103,9 @@ import Layout from "../layouts/Layout.astro";
       <!-- Examples -->
       <div class="flex flex-col md:flex-row items-center md:gap-20">
         <div class="flex flex-col md:gap-4 mt-4 md:mt-0">
-          <a class="mb-4">
+          <a
+            class="hover:scale-105 transition-transform duration-200 ease-in-out hover:shadow-2xl p-4 rounded-md hover:ring-1"
+          >
             <p
               class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
             >
@@ -114,7 +117,9 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </a>
 
-          <a class="mb-4">
+          <a
+            class="hover:scale-105 transition-transform duration-200 ease-in-out hover:shadow-2xl p-4 rounded-md hover:ring-1"
+          >
             <p
               class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
             >
@@ -128,7 +133,7 @@ import Layout from "../layouts/Layout.astro";
 
           <a
             href="/modeler/eyJhdG9tcyI6W3siaWQiOiJoeDEiLCJwb3MiOlsiMCIsIjAiLCIwIl0sInJhZCI6IjAuMyIsImNvbG9yIjoiIzJmYTRlNyJ9LHsiaWQiOiJkY0E4WTBUSElfaGFYZzR2THUwOUkiLCJwb3MiOlsiLTAuNiIsIi0wLjYiLCIwIl0sInJhZCI6IjAuMiIsImNvbG9yIjoiI2ZmZmZmZiJ9LHsiaWQiOiI0d3drU19sWVZmdU5oRFF0NEtINWMiLCJwb3MiOlsiMC42IiwiLTAuNiIsIjAiXSwicmFkIjoiMC4yIiwiY29sb3IiOiIjZmZmZmZmIn1dLCJjb25uZWN0b3JzIjpbeyJpZCI6Inp3WS1fUWE1eGY3R1paNlg1WEJrViIsInN0YXJ0UG9pbnQiOlsiLTAuNiIsIi0wLjYiLCIwIl0sImVuZFBvaW50IjpbIjAiLCIwIiwiMCJdfSx7ImlkIjoiaDdiaWFaR3BzMU5OSHRiUVlxa2lwIiwic3RhcnRQb2ludCI6WyIwLjYiLCItMC42IiwiMCJdLCJlbmRQb2ludCI6WyIwIiwiMCIsIjAiXX1dfQ"
-            class=""
+            class="hover:scale-105 transition-transform duration-200 ease-in-out hover:shadow-2xl p-4 rounded-md hover:ring-1"
           >
             <p
               class="text-md md:text-2xl text-white font-semibold text-center md:text-left"
@@ -144,9 +149,10 @@ import Layout from "../layouts/Layout.astro";
         <img
           src="/molecule-02-m.webp"
           alt="modeler"
-          class="mt-10 md:mt-14 max-w-xs md:max-w-lg rounded-md pb-6"
+          class="mt-10 md:mt-14 max-w-xs md:max-w-[620px] rounded-md pb-6"
         />
       </div>
     </div>
   </div>
+  <Footer />
 </Layout>
